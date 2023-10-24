@@ -1,0 +1,21 @@
+.line {
+    border: none; /* Remove the default line styling */
+    border-top: 1px solid #000; /* Add a 1px solid black line */
+    margin: 10px 0; /* Add some margin for spacing */
+}
+.custom-border {
+    border-width: 2px; /* Set the border width to your desired size */
+    border-color: #9f9ebb; /* Set the border color to your desired color */
+    /* You can add more styles here, such as border-radius, padding, etc. */
+}
+.fixed-container {
+    position: fixed;
+    bottom: 2px; /* Adjust this value to determine where the div is fixed vertically */
+     /* Adjust this value to determine where the div is fixed horizontally */
+    width: 100%; /* Set the width to fill the viewport width */
+    background-color: #fff; /* Add a background color if needed */
+    z-index: 1000; /* Adjust the z-index as needed */
+    /* Add other styling properties as desired */
+  }
+  
+  

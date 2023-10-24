@@ -1,0 +1,79 @@
+<div class="row" cdkDropListGroup>
+   <div class="col-12 col-md-12 col-sm-12 d-flex">
+       <div class="col-5 col-md-5 col-sm-5  border rounded mt-3 shadow mx-2" cdkDropList [cdkDropListData]="todoIssueData" (cdkDropListDropped)="drop($event)">
+        <h1 class="text-center">ToDo</h1>
+        <li class="custom-list" *ngFor="let item of todoIssueData"  cdkDrag [cdkDragData]="item">
+          
+          
+          <div class="row col-5 col-md-5 col-sm-5  ">
+            <div class="col-5 col-md-5 col-sm-5 ">
+              <div ngbDropdown class="d-inline-block">
+                <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                  {{ "Select User to Assign task" || 'Toggle dropdown' }}
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button *ngFor="let user of userData" class="dropdown-item" (click)="setSelectedUser(user)">
+                    {{ user.name }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div class="b-1 d-flex flex-wrap">
+            <div class="flex-item">
+              <p>Project Name: {{ item.project }}</p>
+              <p>startDate: {{ item.startDate | date:'yyyy-MM-dd' }}</p>
+              
+            </div>
+            <div class="flex-item">
+              <p>summary: {{ item.summary }}</p>
+              <p>priority: {{ item.priority }}</p>
+            </div>
+            <div class="flex-item">
+              <p>endDate: {{ item.endDate | date:'yyyy-MM-dd' }}</p>
+              <p>issueType: {{ item.issueType }}</p>
+            </div>
+            <div class="flex-item">
+              <p>description: {{ item.description }}</p>
+              <p hidden>Status: {{ item.status}}</p>
+            </div>
+          </div>
+        </li>
+        
+       </div>
+
+
+
+       <div class="col-5 col-md-5 col-sm-5 border rounded mt-3 shadow mx-2" cdkDropList
+       [cdkDropListData]="otherIssueData"  (cdkDropListDropped)="drop($event)">
+        <h1 class="text-center">Done</h1>
+        <li class="custom-list" *ngFor="let item of otherIssueData" cdkDrag [cdkDragData]="item">
+          <div class="b-1 d-flex flex-wrap">
+            <div class="flex-item">
+              <p>Project Name: {{ item.project }}</p>
+              <p>startDate: {{ item.startDate | date:'yyyy-MM-dd' }}</p>
+              
+            </div>
+            <div class="flex-item">
+              <p>summary: {{ item.summary }}</p>
+              <p>priority: {{ item.priority }}</p>
+            </div>
+            <div class="flex-item">
+              <p>endDate: {{ item.endDate | date:'yyyy-MM-dd' }}</p>
+              <p>issueType: {{ item.issueType }}</p>
+            </div>
+            <div class="flex-item">
+              <p>description: {{ item.description }}</p>
+              <p hidden>Status: {{ item.status}}</p>
+            </div>
+          </div>
+        </li>
+       </div>
+       <div class="col-4">
+        
+       </div>
+   </div>
+</div>

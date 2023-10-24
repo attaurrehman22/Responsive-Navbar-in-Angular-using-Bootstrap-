@@ -1,0 +1,170 @@
+<div class="container">
+  <form [formGroup]="issueForm" (ngSubmit)="onSubmit()">
+  <div class="row mt-2">
+    <h4 class="font-weight-bold">Create Issue</h4>
+  </div>
+ 
+  <div class="row">
+    <div class="col-6">
+      <h6>Project *</h6>
+     
+        <div class="form-group">
+          <select class="form-control" id="exampleFormControlSelect1" formControlName="project">
+            <option value="" disabled>Asia Cup Tasmasha App</option>
+            <option>Asia Cup Tasmasha App</option>
+            <option>CWC Tasmasha App</option>
+            <option>JAZZ Finhub</option>
+            <option>VPMS/option>
+          </select>
+        </div>
+     
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-6">
+      <h6>Issue type *</h6>
+     
+        <div class="form-group">
+          <select class="form-control" id="exampleFormControlSelect1" formControlName="issueType">
+            <option value="" disabled>Select Issue Type</option>
+            <option>Frontend</option>
+            <option>Backend</option>
+            <option>Both</option>
+          </select>
+        </div>
+     
+    </div>
+  </div>
+ 
+  <div class="row">
+    <hr class="line" />
+  </div>
+
+  <div class="row">
+    <div class="col-6 d-flex">
+      <h6 class="mt-1">Status</h6>
+      <button class="btn">
+        <i class="bi bi-info-circle"></i>
+      </button>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-6">
+     
+        <div class="form-group">
+          <select class="form-control" id="exampleFormControlSelect1" formControlName="status">
+            <option value="" disabled>Select Status</option>
+            <option>ToDo</option>
+            <option>Done</option>
+          </select>
+        </div>
+     
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-12 d-flex">
+      <div class="col-12 form-group">
+        <label for="exampleInputEmail1">Summary *</label>
+        <input
+          type="text"
+          class="col-12 form-control custom-border"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder=""
+          formControlName="summary" 
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col-6">
+      <h6>Priority</h6>
+     
+        <div class="form-group">
+          <select class="form-control" id="exampleFormControlSelect1" formControlName="priority">
+            <option value="" disabled>Select Priority</option>
+            <option>Urgent</option>
+            <option>ASAP</option>
+            <option>Done</option>
+          </select>
+        </div>
+     
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col-12">
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+          formControlName="description"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-2 mb-5 d-flex">
+
+    <div class="col-4">
+      <label for="datepicker">Start Date:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="datepicker"
+        placeholder="Select Date"
+        (bsValue)="(selectedDate)"
+        bsDatepicker
+        formControlName="startDate"
+      />
+    </div>
+
+    <div class="col-4">
+      <label for="datepicker">End Date Time:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="datepicker"
+        placeholder="Select Date"
+        (bsValue)="(selectedDate)"
+        bsDatepicker
+        formControlName="endDate"
+      />
+    </div>
+
+
+
+   
+  </div>
+
+  <div class="row mt-2 ">
+      .......
+  </div>
+
+  <div class="row mt-2">
+    
+  </div>
+
+  <div class="row mt-2 fixed-container">
+    <div class="col-10">
+      <div class="row">
+        <hr class="line" />
+      </div>
+      <div class="col-12 d-flex">
+        <div class="col-5 form-check">
+         
+        </div>
+        <div class="col-5"></div>
+        <div class="col-2">
+          <button type="submit" class="btn btn-primary" >Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</form>
+</div>
